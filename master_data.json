@@ -1,32 +1,21 @@
 {
   "caption":"",
   "sub-caption":"",
-  "yaxisname":["title1","title2","title3"],
+  "xaxisname":["Jan","Feb","Mar","Apr","May","Jun"],
   "xaxisname":"title4",
   "dataset": [
     {
-      "x":"Jan",
+      "yaxisname":"title1",
       "y":[100,450,700]
     },
     {
-      "x":"Feb",
+      "yaxisname":"title2",
       "y":[700,900,640]
     },
     {
-      "x":"Mar",
-      "y":[620,600,400]
-    },
-    {
-      "x":"Apr",
-      "y":[820,200,400]
-    },
-    {
-      "x":"May",
-      "y":[620,600,400]
-    },
-    {
-      "x":"Jun",
+      "yaxisname":"title3",
       "y":[620,600,400]
     }
+
   ]
 }
