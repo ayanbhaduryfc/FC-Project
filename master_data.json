@@ -1,32 +1,21 @@
 {
-  "caption":"",
-  "sub-caption":"",
-  "yaxisname":["title1","title2","title3"],
+  "caption":"this is a test",
+  "subcaption":"hello chart ",
+  "xdata":["Jan","Feb","Mar","Apr","May","Jun"],
   "xaxisname":"title4",
   "dataset": [
     {
-      "x":"Jan",
-      "y":[100,450,700]
+      "yaxisname":"title1",
+      "ydata":[100,450,700,800,600,450]
     },
     {
-      "x":"Feb",
-      "y":[700,900,640]
+      "yaxisname":"title2",
+      "ydata":[700,900,640,450,800,900]
     },
     {
-      "x":"Mar",
-      "y":[620,600,400]
-    },
-    {
-      "x":"Apr",
-      "y":[820,200,400]
-    },
-    {
-      "x":"May",
-      "y":[620,600,400]
-    },
-    {
-      "x":"Jun",
-      "y":[620,600,400]
+      "yaxisname":"title3",
+      "ydata":[620,600,400,600,480,560]
     }
+
   ]
 }
