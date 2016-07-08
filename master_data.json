@@ -6,7 +6,7 @@
   "dataset": [
     {
       "yaxisname":"title1",
-      "ydata":[100,450,700,800,600,450,520]
+      "ydata":[100,450,700,200,600,520]
     },
     {
       "yaxisname":"title2",
