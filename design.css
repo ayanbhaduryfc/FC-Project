@@ -1,0 +1,9 @@
+.dashed{
+	stroke: black;
+    stroke-width: 2;
+}
+
+.hair{
+	stroke: red;
+    stroke-width: 1;
+}
