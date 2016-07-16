@@ -179,7 +179,7 @@ function createLine(DivId, chart,range) {
       svg.appendChild(myyaxislineticks);
     if(n <chart.ydata.length - 1){
       var myyaxisdivline = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-      myyaxisdivline.setAttributeNS(null, "width", duration1 * (json.xdata.length - 1) + 2);
+      myyaxisdivline.setAttributeNS(null, "width", duration * (json.xdata.length-1) + 2);
       myyaxisdivline.setAttributeNS(null, "height", duration1 * (n + 1) - duration1 * n);
       myyaxisdivline.setAttributeNS(null, "x", 56);
       myyaxisdivline.setAttributeNS(null, "y", 38 + duration1 * n);
