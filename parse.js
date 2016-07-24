@@ -247,8 +247,9 @@ function createLine(chart,range) {
         var hairlinemulti = document.createElementNS("http://www.w3.org/2000/svg", "line");
         var tooltiptext = document.createElementNS("http://www.w3.org/2000/svg", "text");
         tooltiptext.setAttributeNS(null,"class","tooltip_design");
-        var tooltiptext2 = document.createElementNS("http://www.w3.org/2000/svg", "text");
-        document.addEventListener("animated", function(event)  {
+        //var tooltiptext2 = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        var tooltiprect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+          document.addEventListener("animated", function(event)  {
            hairlinemulti.setAttributeNS(null,"x1",event.detail - 68);
            hairlinemulti.setAttributeNS(null,"y1",0);
            hairlinemulti.setAttributeNS(null,"x2",event.detail - 68);
@@ -273,32 +274,24 @@ function createLine(chart,range) {
                   var tooltipX = searchcircle[l].getAttribute("cx");
                   var text = searchcircle[l].getAttribute("value");
 
+                    tooltiprect.setAttributeNS(null, "x", tooltipX);
+                    tooltiprect.setAttributeNS(null, "y", tooltipY - 15);
+                    tooltiprect.setAttributeNS(null, "width", 32);
+                    tooltiprect.setAttributeNS(null, "height", 20);
+                   
+                    tooltiprect.setAttributeNS(null, "stroke-width", "1");
+                    tooltiprect.setAttributeNS(null, "fill", "#FED8CB");
+
+
                     tooltiptext.setAttributeNS(null, "x", tooltipX);
                     tooltiptext.setAttributeNS(null, "y", tooltipY);
-                    tooltiptext.setAttributeNS(null, "stroke", "red");
+                    tooltiptext.setAttributeNS(null, "stroke", "#6C463B");
                     tooltiptext.textContent = text;
 
+                    svg.appendChild(tooltiprect);
                     svg.appendChild(tooltiptext);
                     }
-               /*
-              if(compare2.left < compare1.right && compare2.right > compare1.left && compare2.top < compare1.bottom && compare2.bottom > compare1.top){
-                var tooltipY = searchcircle[l].getAttribute("cy")-15;
-                  var tooltipX = searchcircle[l].getAttribute("cx");
-                  var text = searchcircle[l].getAttribute("value");
-
-                tooltiptext.setAttributeNS(null, "x", tooltipX);
-                    tooltiptext.setAttributeNS(null, "y", tooltipY);
-                    tooltiptext.setAttributeNS(null, "stroke", "red");
-                    tooltiptext.textContent = text;
-                    svg.appendChild(tooltiptext)
-
-              }
-              else{
-                //tooltiptext.textContent = "a";
-                svg.appendChild(tooltiptext);
-
-              }
-              */
+               
            }
 
 
@@ -316,18 +309,6 @@ function createLine(chart,range) {
 
   }*/
 
-/*function collide (searchcircle, hairlinemulti ){
-    var compare1 = searchcircle.getBoundingClientRect();
-    var compare2 = hairlinemulti.getBoundingClientRect();
-
-    if(compare2.left > compare1.right || compare2.right < compare1.left || compare2.top > compare1.bottom || compare2.bottom <compare1.top){
-          return false;
-    }
-    else{
-      return true;
-    }
-
-  }*/
 
 
 
@@ -449,14 +430,16 @@ var global_div2 = document.getElementById("chart_container");
 
 
 
-         
-         var tooltip = document.createElementNS("http://www.w3.org/2000/svg", 'title');
+        var tooltip = document.createElementNS("http://www.w3.org/2000/svg", 'title');
          tooltip.innerHTML = chart.ydata[f];
          tooltip.setAttributeNS(null,'fill','#FFDBCE');
          tooltip.setAttributeNS(null,'visibility','visible');
          tooltip.setAttributeNS(null,"class","toolshow");
          rect.appendChild(tooltip);
 
+
+
+        
 
 
 }
