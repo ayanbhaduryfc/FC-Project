@@ -340,6 +340,21 @@ var global_div2 = document.getElementById("chart_container");
       myyaxislineticks.setAttributeNS(null, "stroke", "#DFDFDF");
       svg.appendChild(myyaxislineticks);
 
+      var myrectbox = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+        myrectbox.setAttributeNS(null, "width", 300);
+        myrectbox.setAttributeNS(null, "height", 30);
+        myrectbox.setAttributeNS(null, "x", 60);
+        myrectbox.setAttributeNS(null, "y", 5);
+        myrectbox.setAttributeNS(null, "fill","#F5FAFF");
+        myrectbox.setAttributeNS(null,"stroke-width",2);
+        svg.appendChild(myrectbox);
+
+      var myinsidetext = document.createElementNS("http://www.w3.org/2000/svg", "text") ;
+      myinsidetext.setAttributeNS(null,"x",150);
+      myinsidetext.setAttributeNS(null,"y",33);
+      myinsidetext.textContent = chart.yaxisname;
+      svg.appendChild(myinsidetext);
+
       if(n <ydivision-1){
       var myyaxisdivline = document.createElementNS("http://www.w3.org/2000/svg", "rect");
         myyaxisdivline.setAttributeNS(null, "width", 300);
@@ -384,6 +399,7 @@ var global_div2 = document.getElementById("chart_container");
       svg.appendChild(myxaxislineticks);
 
       if(count == length - 1 || count == length-2 || count == length-3){
+
       var text = document.createElementNS("http://www.w3.org/2000/svg", "text");
       text.setAttributeNS(null, "x", 56 + durationx * m);
       text.setAttributeNS(null, "y", 345);
@@ -429,7 +445,6 @@ var global_div2 = document.getElementById("chart_container");
          svg.appendChild(rect);
 
 
-
         var tooltip = document.createElementNS("http://www.w3.org/2000/svg", 'title');
          tooltip.innerHTML = chart.ydata[f];
          tooltip.setAttributeNS(null,'fill','#FFDBCE');
@@ -437,8 +452,7 @@ var global_div2 = document.getElementById("chart_container");
          tooltip.setAttributeNS(null,"class","toolshow");
          rect.appendChild(tooltip);
 
-
-
+        
         
 
 
@@ -479,6 +493,12 @@ var global_div2 = document.getElementById("chart_container");
       
      if( event.detail.mousex >= a && event.detail.mousex <= c && event.detail.mousey >= b){
         columnhover[extract].style.fill = "#BC4445";
+
+
+        
+
+
+
      } 
      else{
         columnhover[extract].style.fill = "#1E7ACD";

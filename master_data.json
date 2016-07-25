@@ -5,26 +5,33 @@
   "chartheight" : "340",
   "chartwidth"  : "365",
   "xdata": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+
   "xaxisname": "title4",
   "dataset": [{
+      
       "yaxisname": "title1",
       "ydata": [190,250 , 970,420 , 620, 520]
     }, {
+      
       "yaxisname": "title2",
       "ydata": [0, 350, 640, 4400, 800, 650]
     }, {
+     
       "yaxisname": "title3",
       "ydata": [230, 680, 900, 320, 200,300]
 
     }, {
+      
       "yaxisname": "title4",
       "ydata": [250, 700, 2100, 3200, 300,410]
     },
     {
+     
       "yaxisname": "title5",
       "ydata": [350, 500, 210, 1900, 900,710]
     },
     {
+     
       "yaxisname": "title6",
       "ydata": [520, 300, 1000, 320, 800,610]
     }
